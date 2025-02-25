@@ -33,7 +33,7 @@ Follow these steps to set up and run the project locally:
 ### 1️⃣ Clone the Repository
 
 ```sh
-git clone https://github.com/your-repo-name/crypto-website.git
+git clone https://github.com/MohsenKazemizade/crypto-website
 cd crypto-website
 ```
 
