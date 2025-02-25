@@ -1,0 +1,75 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Documentation/Project Setup" />
+
+# 📖 Project Setup Guide
+
+## 1️⃣ Initial Setup with Vite
+
+To create the project with **Vite**, we used the following command:
+
+```sh
+npm create vite@latest crypto-website --template react
+```
+
+## 2️⃣ Installing Dependencies
+
+The following dependencies were installed:
+
+- **React Router** for navigation:
+  ```sh
+  npm install react-router-dom
+  ```
+- **Ant Design** for UI components:
+  ```sh
+  npm install antd @ant-design/icons
+  ```
+- **Axios** for API requests:
+  ```sh
+  npm install axios
+  ```
+
+## 3️⃣ Storybook Installation
+
+Storybook was installed using:
+
+```sh
+npx sb init
+```
+
+To start Storybook, run:
+
+```sh
+npm run storybook
+```
+
+---
+
+## 📂 Project Folder Structure
+
+```plaintext
+crypto-website/
+│── src/
+│   ├── components/       # Reusable UI components
+│   ├── pages/            # Page-level components (Home, Dashboard, Profile)
+│   ├── hooks/            # Custom React hooks (if needed)
+│   ├── context/          # Global state management (if implemented)
+│   ├── services/         # API requests (Axios setup)
+│   ├── main.tsx          # Root application file
+│── public/               # Static assets (images, icons, etc.)
+│── .storybook/           # Storybook configuration
+│── package.json          # Project dependencies & scripts
+│── README.md             # Project documentation
+```
+
+---
+
+## 📝 Notes
+
+- This project does **not** have a backend yet.
+- Cryptocurrency pricing data is retrieved from **CoinCap API**.
+- Authentication service is handled via an **external API provider**.
+
+---
+
+📌 **This documentation is automatically included in Storybook for quick reference!** 🚀

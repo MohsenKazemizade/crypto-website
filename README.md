@@ -8,7 +8,7 @@ Crypto-Website is an **open-source web application** that allows users to **view
 ✔️ **User authentication (Register & Login)**  
 ✔️ **Personalized dashboard for each user**  
 ✔️ **Favorite cryptocurrencies tracking**  
-✔️ **Custom price alerts with user-defined time intervals**  
+✔️ **Custom price alerts with user-defined time intervals**
 
 ---
 
@@ -16,13 +16,13 @@ Crypto-Website is an **open-source web application** that allows users to **view
 
 This project is built using the following technologies:
 
-- **Vite** → Fast development and optimized builds  
-- **React** → Component-based UI development  
-- **React Router** → Client-side navigation and routing  
-- **Ant Design** → Pre-built UI components for a modern interface  
-- **Axios** → API calls and data fetching  
-- **Storybook** → UI component documentation and visualization  
-- **React Testing Library** → Unit and integration testing for React components  
+- **Vite** → Fast development and optimized builds
+- **React** → Component-based UI development
+- **React Router** → Client-side navigation and routing
+- **Ant Design** → Pre-built UI components for a modern interface
+- **Axios** → API calls and data fetching
+- **Storybook** → UI component documentation and visualization
+- **React Testing Library** → Unit and integration testing for React components
 
 ---
 
@@ -31,20 +31,24 @@ This project is built using the following technologies:
 Follow these steps to set up and run the project locally:
 
 ### 1️⃣ Clone the Repository
+
 ```sh
 git clone https://github.com/your-repo-name/crypto-website.git
 cd crypto-website
 ```
 
 ### 2️⃣ Install Dependencies
+
 ```sh
 npm install
 ```
 
 ### 3️⃣ Run the Development Server
+
 ```sh
 npm run dev
 ```
+
 After running this command, the project will be available at:  
 ➡️ **http://localhost:5173/** (default Vite dev server)
 
@@ -59,8 +63,8 @@ This project includes **user authentication** for private and public pages:
 
 💡 Users need to **register and log in** to access **private pages**.
 
-- **Authentication is handled via an external API.**  
-- **Crypto pricing data is fetched from CoinCap API.**  
+- **Authentication is handled via (https://moviesapi.codingfront.dev).**
+- **Crypto pricing data is fetched from CoinCap API.**
 
 ---
 
@@ -85,14 +89,16 @@ crypto-website/
 
 ## 🧪 Testing with React Testing Library
 
-This project uses **React Testing Library** for unit and integration testing.  
+This project uses **React Testing Library** for unit and integration testing.
 
 To run tests:
+
 ```sh
 npm test
 ```
 
 ### Installed Testing Dependencies:
+
 ```sh
 npm install --save-dev @testing-library/react @testing-library/jest-dom @testing-library/user-event
 ```
@@ -102,11 +108,13 @@ npm install --save-dev @testing-library/react @testing-library/jest-dom @testing
 ## 🔧 Security Considerations
 
 To check for vulnerabilities in dependencies, run:
+
 ```sh
 npm audit
 ```
 
 If issues are found, try to fix them with:
+
 ```sh
 npm audit fix
 ```
