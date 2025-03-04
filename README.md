@@ -73,15 +73,21 @@ This project includes **user authentication** for private and public pages:
 ```plaintext
 crypto-website/
 │── src/
-│   ├── components/       # Reusable UI components
-│   ├── pages/            # Page-level components (Home, Dashboard, Profile)
-│   ├── hooks/            # Custom React hooks (if needed)
-│   ├── context/          # Global state management (if implemented)
-│   ├── services/         # API requests (Axios setup)
-│   ├── main.tsx          # Root application file
+│   ├── Components/       # Reusable UI components
+│   ├── Context/          # Global state management (Context API)
+│   ├── Hooks/            # Custom hooks for reusable logic
+│   ├── Layouts/          # Layout components (AuthLayout, PrimaryLayout, SecondaryLayout, UserLayout)
+│   ├── Modules/          # Independent and reusable modules in the project
+│   ├── Pages/            # Page components (Auth, LoginPage, SignupPage, CryptoDetailsPage, DashboardPage, ExchangeMarketDetailsPage, ExchangePage, HomePage, NotFoundPage, RankingsPage)
+│   ├── Router/           # Application routing management
+│   ├── Services/         # API calls and server communication (Axios setup)
+│   ├── Stories/          # Storybook documentation and related assets
+│   ├── Styles/           # CSS and styling files
+│   ├── Utils/            # Utility functions and helper methods
+│   ├── main.tsx          # Main entry file of the application
 │── public/               # Static assets (images, icons, etc.)
-│── .storybook/           # Storybook configuration
-│── package.json          # Project dependencies & scripts
+│── .storybook/           # Storybook configuration files
+│── package.json          # Project dependencies and scripts
 │── README.md             # Project documentation
 ```
 
@@ -123,7 +129,7 @@ npm audit fix
 
 ## 📝 Additional Notes
 
-- The authentication service is handled via an **external API provider**.
+- The authentication service is handled via an **(https://moviesapi.codingfront.dev)**.
 - Cryptocurrency pricing data is retrieved from **CoinCap API**.
 - The project does **not** have a backend yet, but future updates may introduce additional server-side functionality.
 
