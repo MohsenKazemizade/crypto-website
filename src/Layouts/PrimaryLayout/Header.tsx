@@ -1,9 +1,13 @@
 import React from "react";
+import { Switch } from "antd";
+import { useTheme } from "../../Context/ThemeContext";
 
 const Header: React.FC = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <div>
-      <h1>Header</h1>
+      <Switch checked={theme === "dark"} onChange={toggleTheme} />
     </div>
   );
 };
