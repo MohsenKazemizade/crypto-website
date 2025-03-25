@@ -54,6 +54,36 @@ After running this command, the project will be available at:
 
 ---
 
+## 🎨 Theme Configuration (Dark/Light Mode)
+
+The project includes a **Dark/Light Mode** implemented using Ant Design's **ConfigProvider** and **Context API**.
+
+### How It Works:
+
+- **ThemeContext.tsx:** Manages the current theme and provides a toggle function.
+- **theme.ts:** Defines light and dark theme configurations using Ant Design's token system.
+- **Header.tsx:** Contains a **Switch** component to toggle between dark and light modes.
+- **ConfigProvider:** Is used within **ThemeContext.tsx** to apply the theme dynamically across the entire application.
+
+### Example:
+
+```tsx
+import { Fragment } from "react";
+import { createRoot } from "react-dom/client";
+import Router from "./Router/Index";
+import { ThemeProvider } from "./Context/ThemeContext";
+
+createRoot(document.getElementById("root")!).render(
+  <Fragment>
+    <ThemeProvider>
+      <Router />
+    </ThemeProvider>
+  </Fragment>
+);
+```
+
+---
+
 ## 🔐 Authentication & User Roles
 
 This project includes **user authentication** for private and public pages:
