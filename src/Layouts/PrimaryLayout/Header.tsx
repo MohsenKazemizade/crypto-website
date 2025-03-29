@@ -1,14 +1,25 @@
-import React from "react";
-import { Switch } from "antd";
-import { useTheme } from "../../Context/ThemeContext";
+// src/Components/Header/Header.tsx
+import React, { Suspense } from "react";
+import { Grid } from "antd";
+
+const { useBreakpoint } = Grid;
+
+const SearchBarMobile = React.lazy(
+  () => import("../../Components/SearchBar/SearchBarMobile")
+);
+const SearchBarDesktop = React.lazy(
+  () => import("../../Components/SearchBar/SearchBarDesktop")
+);
 
 const Header: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
 
   return (
-    <div>
-      <Switch checked={theme === "dark"} onChange={toggleTheme} />
-    </div>
+    <Suspense fallback={null}>
+      {isMobile && <SearchBarMobile />}
+      {!isMobile && <SearchBarDesktop />}
+    </Suspense>
   );
 };
 
