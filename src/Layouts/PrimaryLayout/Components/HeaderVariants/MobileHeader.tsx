@@ -1,10 +1,14 @@
-import React from "react";
+// src/layouts/PrimaryLayout/components/HeaderVariants/MobileHeader.tsx
+import React, { Suspense } from "react";
+
+const NavBarMobile = React.lazy(() => import("../Navbar/NavBarMobile"));
 
 const MobileHeader: React.FC = () => {
   return (
-    <div>
-      <h1>MobileHeader Header</h1>
-    </div>
+    <Suspense fallback={null}>
+      <NavBarMobile />
+    </Suspense>
   );
 };
+
 export default MobileHeader;

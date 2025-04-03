@@ -1,10 +1,14 @@
-import React from "react";
+// src/layouts/PrimaryLayout/components/HeaderVariants/DesktopHeader.tsx
+import React, { Suspense } from "react";
+
+const NavBarDesktop = React.lazy(() => import("../Navbar/NavBarDesktop"));
 
 const DesktopHeader: React.FC = () => {
   return (
-    <div>
-      <h1>Desktop Header</h1>
-    </div>
+    <Suspense fallback={null}>
+      <NavBarDesktop />
+    </Suspense>
   );
 };
+
 export default DesktopHeader;

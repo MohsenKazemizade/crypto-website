@@ -4,11 +4,11 @@ import { Grid } from "antd";
 
 const { useBreakpoint } = Grid;
 
-const SearchBarMobile = React.lazy(
-  () => import("../../Components/SearchBar/SearchBarMobile")
+const MobileHeader = React.lazy(
+  () => import("./Components/HeaderVariants/MobileHeader")
 );
-const SearchBarDesktop = React.lazy(
-  () => import("../../Components/SearchBar/SearchBarDesktop")
+const DesktopHeader = React.lazy(
+  () => import("./Components/HeaderVariants/DesktopHeader")
 );
 
 const Header: React.FC = () => {
@@ -17,8 +17,8 @@ const Header: React.FC = () => {
 
   return (
     <Suspense fallback={null}>
-      {isMobile && <SearchBarMobile />}
-      {!isMobile && <SearchBarDesktop />}
+      {isMobile && <MobileHeader />}
+      {!isMobile && <DesktopHeader />}
     </Suspense>
   );
 };

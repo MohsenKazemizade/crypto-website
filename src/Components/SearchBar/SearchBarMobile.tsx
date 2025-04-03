@@ -12,7 +12,7 @@ const SearchBarMobile: React.FC = () => {
   return (
     <div
       style={{
-        direction: "rtl",
+        // direction: "rtl",
         position: "relative",
         display: "flex",
         alignItems: "center",
@@ -23,7 +23,7 @@ const SearchBarMobile: React.FC = () => {
           onClick={() => setOpen(true)}
           style={{
             fontSize: "16px",
-            marginLeft: "8px",
+            marginRight: "8px",
             cursor: "pointer",
             transition: "color 0.3s ease",
             color: theme === "dark" ? "#EAECEF" : "#1E2329",
@@ -41,7 +41,7 @@ const SearchBarMobile: React.FC = () => {
           onClick={() => setOpen(false)}
           style={{
             fontSize: "16px",
-            marginLeft: "8px",
+            marginRight: "8px",
             cursor: "pointer",
             color: theme === "dark" ? "#EAECEF" : "#1E2329",
             transition: "color 0.3s ease",

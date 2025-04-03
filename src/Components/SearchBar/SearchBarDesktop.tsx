@@ -9,14 +9,22 @@ const SearchBarDesktop: React.FC = () => {
 
   return (
     <div
-      style={{ position: "relative", display: "flex", alignItems: "center" }}
+      style={{
+        display: "flex",
+        alignItems: "center", // عمودی وسط
+        justifyContent: "center", // افقی وسط (در صورت نیاز)
+        height: "100%", // اطمینان از پر کردن ارتفاع والد
+      }}
     >
       <Input
         placeholder="Search coins..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         allowClear
-        style={{ borderRadius: 4, height: "32px" }}
+        style={{
+          borderRadius: 4,
+          height: 32, // ارتفاع ثابت برای هم‌ترازی بهتر با آیتم‌ها
+        }}
       />
     </div>
   );
