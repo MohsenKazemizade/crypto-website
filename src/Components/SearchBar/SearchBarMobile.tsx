@@ -12,7 +12,6 @@ const SearchBarMobile: React.FC = () => {
   return (
     <div
       style={{
-        // direction: "rtl",
         position: "relative",
         display: "flex",
         alignItems: "center",

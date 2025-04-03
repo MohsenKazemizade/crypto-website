@@ -5,6 +5,7 @@ import type { MenuProps } from "antd";
 import { Dropdown, Space } from "antd";
 import SearchBarMobile from "../../../../Components/SearchBar/SearchBarMobile";
 import SearchBarDesktop from "../../../../Components/SearchBar/SearchBarDesktop";
+import ThemeSwitcherMenuItem from "../../../../Components/SwitchTheme/ThemeSwitcherMenuItem";
 
 export const currenciesItems: MenuProps["items"] = [
   {
@@ -58,6 +59,7 @@ export const mobileItems: MenuProps["items"] = [
     key: "search-bar",
     label: <SearchBarMobile />,
   },
+  { key: "theme", label: <ThemeSwitcherMenuItem /> },
   { key: "/", label: <Link to="/">Coins</Link> },
   { key: "/projects", label: <Link to="/projects">Exchanges</Link> },
   {
@@ -90,4 +92,5 @@ export const deskTopItems: MenuProps["items"] = [
     key: "search-bar",
     label: <SearchBarDesktop />,
   },
+  { key: "theme", label: <ThemeSwitcherMenuItem /> },
 ];
