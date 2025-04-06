@@ -2,11 +2,12 @@
 import { Link } from "react-router-dom";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
-import { Dropdown, Space } from "antd";
+import { Dropdown, Menu, Space } from "antd";
 import SearchBarMobile from "../../../../Components/SearchBar/SearchBarMobile";
 import SearchBarDesktop from "../../../../Components/SearchBar/SearchBarDesktop";
 import ThemeSwitcherMenuItem from "../../../../Components/SwitchTheme/ThemeSwitcherMenuItem";
-
+import LoginLink from "../../../../Components/Navbar/LoginLink";
+import SignupLink from "../../../../Components/Navbar/SignupLink";
 export const currenciesItems: MenuProps["items"] = [
   {
     key: "1",
@@ -55,6 +56,25 @@ export const currenciesItems: MenuProps["items"] = [
 ];
 
 export const mobileItems: MenuProps["items"] = [
+  {
+    key: "auth-links",
+    label: (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "100%",
+        }}
+      >
+        <Menu.Item key="login">
+          <LoginLink />
+        </Menu.Item>
+        <Menu.Item key="login">
+          <SignupLink />
+        </Menu.Item>
+      </div>
+    ),
+  },
   {
     key: "search-bar",
     label: <SearchBarMobile />,
