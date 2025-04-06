@@ -59,7 +59,22 @@ export const mobileItems: MenuProps["items"] = [
     key: "search-bar",
     label: <SearchBarMobile />,
   },
-  { key: "theme", label: <ThemeSwitcherMenuItem /> },
+  {
+    key: "theme",
+    label: (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
+        }}
+      >
+        <span>Theme</span>
+        <ThemeSwitcherMenuItem />
+      </div>
+    ),
+  },
   { key: "/", label: <Link to="/">Coins</Link> },
   { key: "/projects", label: <Link to="/projects">Exchanges</Link> },
   {

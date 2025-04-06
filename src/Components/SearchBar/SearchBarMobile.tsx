@@ -54,9 +54,10 @@ const SearchBarMobile: React.FC = () => {
       )}
       <div
         style={{
-          width: open ? 200 : 0,
+          width: open ? "100%" : 0,
           overflow: "hidden",
           transition: "width 0.3s ease",
+          display: "flex",
         }}
       >
         <Input
@@ -64,7 +65,7 @@ const SearchBarMobile: React.FC = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           allowClear
-          style={{ borderRadius: 4 }}
+          style={{ borderRadius: 4, width: "100%" }}
         />
       </div>
     </div>
