@@ -1,9 +1,14 @@
-import React from "react";
-const SmallDesktopHeader: React.FC = () => {
+// src/layouts/PrimaryLayout/components/HeaderVariants/TabletHeader.tsx
+import React, { Suspense } from "react";
+
+const NavBarTablet = React.lazy(() => import("../Navbar/NavBarTablet"));
+
+const TabletHeader: React.FC = () => {
   return (
-    <div>
-      <h1>Small Desktop Header</h1>
-    </div>
+    <Suspense fallback={null}>
+      <NavBarTablet />
+    </Suspense>
   );
 };
-export default SmallDesktopHeader;
+
+export default TabletHeader;

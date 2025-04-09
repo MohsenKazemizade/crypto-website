@@ -8,6 +8,7 @@ import SearchBarDesktop from "../../../../Components/SearchBar/SearchBarDesktop"
 import ThemeSwitcherMenuItem from "../../../../Components/SwitchTheme/ThemeSwitcherMenuItem";
 import LoginLink from "../../../../Components/Auth/LoginLink";
 import SignupLink from "../../../../Components/Auth/SignupLink";
+import DrawerMenu from "./DrawerMenu";
 export const currenciesItems: MenuProps["items"] = [
   {
     key: "1",
@@ -109,6 +110,37 @@ export const mobileItems: MenuProps["items"] = [
     ),
   },
 ];
+export const tabletItems: MenuProps["items"] = [
+  {
+    key: "theme",
+    label: (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
+        }}
+      >
+        <span>Theme</span>
+        <ThemeSwitcherMenuItem />
+      </div>
+    ),
+  },
+  { key: "/", label: <Link to="/">Coins</Link> },
+  { key: "/projects", label: <Link to="/projects">Exchanges</Link> },
+  {
+    key: "/currencies",
+    label: (
+      <Dropdown menu={{ items: currenciesItems }} placement="bottom" arrow>
+        <Space>
+          USD
+          <DownOutlined />
+        </Space>
+      </Dropdown>
+    ),
+  },
+];
 export const deskTopLeftItems: MenuProps["items"] = [
   { key: "/", label: <Link to="/">Coins</Link> },
   { key: "/projects", label: <Link to="/projects">Exchanges</Link> },
@@ -124,9 +156,24 @@ export const deskTopLeftItems: MenuProps["items"] = [
     ),
   },
 ];
+export const tabletLeftItems: MenuProps["items"] = [
+  { key: "/", label: <Link to="/">Coins</Link> },
+];
+export const mobileLeftItems: MenuProps["items"] = [
+  { key: "/", label: <Link to="/">Coins</Link> },
+];
 export const deskTopRightItems: MenuProps["items"] = [
   { key: "search-bar", label: <SearchBarDesktop /> },
   { key: "login", label: <LoginLink /> },
   { key: "signup", label: <SignupLink /> },
   { key: "theme", label: <ThemeSwitcherMenuItem /> },
+];
+export const tabletRightItems: MenuProps["items"] = [
+  { key: "search-bar", label: <SearchBarMobile rtl={false} /> },
+  { key: "login", label: <LoginLink /> },
+  { key: "signup", label: <SignupLink /> },
+  { key: "/drawer", label: <DrawerMenu isMobile={false} /> },
+];
+export const mobileRightItems: MenuProps["items"] = [
+  { key: "/drawer", label: <DrawerMenu /> },
 ];

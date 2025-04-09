@@ -1,9 +1,11 @@
-// src/Components/Navbar/NavBarDesktop.tsx
+// src/Components/Navbar/NavBarTablet.tsx
 import React from "react";
 import { Layout, Menu } from "antd";
-import { deskTopRightItems, deskTopLeftItems } from "./NavbarItems";
+import { tabletLeftItems, tabletRightItems } from "./NavbarItems";
+
 const { Header: AntdHeader } = Layout;
-const NavBarDesktop: React.FC = () => {
+
+const NavBarTablet: React.FC = () => {
   return (
     <AntdHeader
       style={{
@@ -14,32 +16,25 @@ const NavBarDesktop: React.FC = () => {
     >
       <Menu
         mode="horizontal"
-        items={deskTopLeftItems}
+        items={tabletLeftItems}
         selectable={false}
         style={{
           flex: 1,
           display: "flex",
           justifyContent: "flex-start",
           background: "transparent",
+          gap: "8px",
         }}
       />
+
       <Menu
         mode="horizontal"
-        items={deskTopRightItems}
+        items={tabletRightItems}
         selectable={false}
-        overflowedIndicator={null}
-        style={{
-          flexWrap: "nowrap",
-          whiteSpace: "nowrap",
-          overflow: "hidden",
-          gap: "1px",
-          display: "flex",
-          background: "transparent",
-          alignItems: "center",
-        }}
+        style={{ display: "flex", alignItems: "center", gap: "8px" }}
       />
     </AntdHeader>
   );
 };
 
-export default NavBarDesktop;
+export default NavBarTablet;

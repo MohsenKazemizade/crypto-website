@@ -3,8 +3,10 @@ import { SearchOutlined, CloseOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { Input } from "antd";
 import { useTheme } from "../../Context/ThemeContext";
-
-const SearchBarMobile: React.FC = () => {
+interface SearchBarMobileProps {
+  rtl?: boolean;
+}
+const SearchBarMobile: React.FC<SearchBarMobileProps> = ({ rtl = true }) => {
   const [open, setOpen] = useState(false);
   const { theme } = useTheme();
   const [query, setQuery] = useState("");
@@ -15,6 +17,7 @@ const SearchBarMobile: React.FC = () => {
         position: "relative",
         display: "flex",
         alignItems: "center",
+        direction: rtl ? "unset" : "rtl",
       }}
     >
       {!open && (
@@ -22,7 +25,8 @@ const SearchBarMobile: React.FC = () => {
           onClick={() => setOpen(true)}
           style={{
             fontSize: "16px",
-            marginRight: "8px",
+            marginRight: rtl ? "8px" : "unset",
+            marginLeft: rtl ? "unset" : "8px",
             cursor: "pointer",
             transition: "color 0.3s ease",
             color: theme === "dark" ? "#EAECEF" : "#1E2329",
@@ -40,7 +44,8 @@ const SearchBarMobile: React.FC = () => {
           onClick={() => setOpen(false)}
           style={{
             fontSize: "16px",
-            marginRight: "8px",
+            marginRight: rtl ? "8px" : "unset",
+            marginLeft: rtl ? "unset" : "8px",
             cursor: "pointer",
             color: theme === "dark" ? "#EAECEF" : "#1E2329",
             transition: "color 0.3s ease",
@@ -65,7 +70,11 @@ const SearchBarMobile: React.FC = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           allowClear
-          style={{ borderRadius: 4, width: "100%" }}
+          style={{
+            borderRadius: 4,
+            width: "100%",
+            direction: rtl ? "unset" : "ltr",
+          }}
         />
       </div>
     </div>
