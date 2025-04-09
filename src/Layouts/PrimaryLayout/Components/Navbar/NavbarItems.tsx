@@ -6,8 +6,8 @@ import { Dropdown, Menu, Space } from "antd";
 import SearchBarMobile from "../../../../Components/SearchBar/SearchBarMobile";
 import SearchBarDesktop from "../../../../Components/SearchBar/SearchBarDesktop";
 import ThemeSwitcherMenuItem from "../../../../Components/SwitchTheme/ThemeSwitcherMenuItem";
-import LoginLink from "../../../../Components/Navbar/LoginLink";
-import SignupLink from "../../../../Components/Navbar/SignupLink";
+import LoginLink from "../../../../Components/Auth/LoginLink";
+import SignupLink from "../../../../Components/Auth/SignupLink";
 export const currenciesItems: MenuProps["items"] = [
   {
     key: "1",
@@ -69,7 +69,7 @@ export const mobileItems: MenuProps["items"] = [
         <Menu.Item key="login">
           <LoginLink />
         </Menu.Item>
-        <Menu.Item key="login">
+        <Menu.Item key="signup">
           <SignupLink />
         </Menu.Item>
       </div>
@@ -109,7 +109,7 @@ export const mobileItems: MenuProps["items"] = [
     ),
   },
 ];
-export const deskTopItems: MenuProps["items"] = [
+export const deskTopLeftItems: MenuProps["items"] = [
   { key: "/", label: <Link to="/">Coins</Link> },
   { key: "/projects", label: <Link to="/projects">Exchanges</Link> },
   {
@@ -123,9 +123,10 @@ export const deskTopItems: MenuProps["items"] = [
       </Dropdown>
     ),
   },
-  {
-    key: "search-bar",
-    label: <SearchBarDesktop />,
-  },
+];
+export const deskTopRightItems: MenuProps["items"] = [
+  { key: "search-bar", label: <SearchBarDesktop /> },
+  { key: "login", label: <LoginLink /> },
+  { key: "signup", label: <SignupLink /> },
   { key: "theme", label: <ThemeSwitcherMenuItem /> },
 ];
