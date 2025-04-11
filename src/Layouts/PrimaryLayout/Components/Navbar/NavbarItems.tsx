@@ -9,6 +9,7 @@ import ThemeSwitcherMenuItem from "../../../../Components/SwitchTheme/ThemeSwitc
 import LoginLink from "../../../../Components/Auth/LoginLink";
 import SignupLink from "../../../../Components/Auth/SignupLink";
 import DrawerMenu from "./DrawerMenu";
+import HeaderLogo from "../HeaderLogo";
 export const currenciesItems: MenuProps["items"] = [
   {
     key: "1",
@@ -142,6 +143,7 @@ export const tabletItems: MenuProps["items"] = [
   },
 ];
 export const deskTopLeftItems: MenuProps["items"] = [
+  { key: "logo", label: <HeaderLogo /> },
   { key: "/", label: <Link to="/">Coins</Link> },
   { key: "/projects", label: <Link to="/projects">Exchanges</Link> },
   {
@@ -157,10 +159,10 @@ export const deskTopLeftItems: MenuProps["items"] = [
   },
 ];
 export const tabletLeftItems: MenuProps["items"] = [
-  { key: "/", label: <Link to="/">Coins</Link> },
+  { key: "logo", label: <HeaderLogo /> },
 ];
 export const mobileLeftItems: MenuProps["items"] = [
-  { key: "/", label: <Link to="/">Coins</Link> },
+  { key: "logo", label: <HeaderLogo /> },
 ];
 export const deskTopRightItems: MenuProps["items"] = [
   { key: "search-bar", label: <SearchBarDesktop /> },
