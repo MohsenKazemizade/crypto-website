@@ -1,0 +1,3 @@
+.ant-menu-item.no-after::after {
+  display: none !important;
+}

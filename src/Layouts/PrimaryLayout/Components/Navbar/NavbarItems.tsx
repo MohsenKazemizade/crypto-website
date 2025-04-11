@@ -56,7 +56,6 @@ export const currenciesItems: MenuProps["items"] = [
     label: "a danger item",
   },
 ];
-
 export const mobileItems: MenuProps["items"] = [
   {
     key: "auth-links",
@@ -111,6 +110,7 @@ export const mobileItems: MenuProps["items"] = [
     ),
   },
 ];
+
 export const tabletItems: MenuProps["items"] = [
   {
     key: "theme",
@@ -127,6 +127,7 @@ export const tabletItems: MenuProps["items"] = [
         <ThemeSwitcherMenuItem />
       </div>
     ),
+    className: "no-after",
   },
   { key: "/", label: <Link to="/">Coins</Link> },
   { key: "/projects", label: <Link to="/projects">Exchanges</Link> },
@@ -143,7 +144,7 @@ export const tabletItems: MenuProps["items"] = [
   },
 ];
 export const deskTopLeftItems: MenuProps["items"] = [
-  { key: "logo", label: <HeaderLogo /> },
+  { key: "logo", label: <HeaderLogo />, className: "no-after" },
   { key: "/", label: <Link to="/">Coins</Link> },
   { key: "/projects", label: <Link to="/projects">Exchanges</Link> },
   {
@@ -159,23 +160,31 @@ export const deskTopLeftItems: MenuProps["items"] = [
   },
 ];
 export const tabletLeftItems: MenuProps["items"] = [
-  { key: "logo", label: <HeaderLogo /> },
+  { key: "logo", label: <HeaderLogo />, className: "no-after" },
 ];
 export const mobileLeftItems: MenuProps["items"] = [
-  { key: "logo", label: <HeaderLogo /> },
+  { key: "logo", label: <HeaderLogo />, className: "no-after" },
 ];
 export const deskTopRightItems: MenuProps["items"] = [
-  { key: "search-bar", label: <SearchBarDesktop /> },
-  { key: "login", label: <LoginLink /> },
-  { key: "signup", label: <SignupLink /> },
-  { key: "theme", label: <ThemeSwitcherMenuItem /> },
+  { key: "search-bar", label: <SearchBarDesktop />, className: "no-after" },
+  { key: "login", label: <LoginLink />, className: "no-after" },
+  { key: "signup", label: <SignupLink />, className: "no-after" },
+  { key: "theme", label: <ThemeSwitcherMenuItem />, className: "no-after" },
 ];
 export const tabletRightItems: MenuProps["items"] = [
-  { key: "search-bar", label: <SearchBarMobile rtl={false} /> },
-  { key: "login", label: <LoginLink /> },
-  { key: "signup", label: <SignupLink /> },
-  { key: "/drawer", label: <DrawerMenu isMobile={false} /> },
+  {
+    key: "search-bar",
+    label: <SearchBarMobile rtl={false} />,
+    className: "no-after",
+  },
+  { key: "login", label: <LoginLink />, className: "no-after" },
+  { key: "signup", label: <SignupLink />, className: "no-after" },
+  {
+    key: "/drawer",
+    label: <DrawerMenu isMobile={false} />,
+    className: "no-after",
+  },
 ];
 export const mobileRightItems: MenuProps["items"] = [
-  { key: "/drawer", label: <DrawerMenu /> },
+  { key: "/drawer", label: <DrawerMenu />, className: "no-after" },
 ];
