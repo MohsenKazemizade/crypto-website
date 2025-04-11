@@ -171,6 +171,16 @@ export const deskTopRightItems: MenuProps["items"] = [
   { key: "signup", label: <SignupLink />, className: "no-after" },
   { key: "theme", label: <ThemeSwitcherMenuItem />, className: "no-after" },
 ];
+export const smallDesktopRightitems: MenuProps["items"] = [
+  {
+    key: "search-bar",
+    label: <SearchBarMobile rtl={false} />,
+    className: "no-after",
+  },
+  { key: "login", label: <LoginLink />, className: "no-after" },
+  { key: "signup", label: <SignupLink />, className: "no-after" },
+  { key: "theme", label: <ThemeSwitcherMenuItem />, className: "no-after" },
+];
 export const tabletRightItems: MenuProps["items"] = [
   {
     key: "search-bar",

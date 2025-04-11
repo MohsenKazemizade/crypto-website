@@ -7,6 +7,9 @@ const { useBreakpoint } = Grid;
 const MobileHeader = React.lazy(
   () => import("./Components/HeaderVariants/MobileHeader")
 );
+const SmallDesktopHeader = React.lazy(
+  () => import("./Components/HeaderVariants/SmallDesktopHeader")
+);
 const TabletHeader = React.lazy(
   () => import("./Components/HeaderVariants/TabletHeader")
 );
@@ -24,7 +27,7 @@ const Header: React.FC = () => {
     <Suspense fallback={null}>
       {isMobile && <MobileHeader />}
       {isTablet && <TabletHeader />}
-      {isSmallDesktop && <DesktopHeader />}
+      {isSmallDesktop && <SmallDesktopHeader />}
       {isLargeDesktop && <DesktopHeader />}
     </Suspense>
   );
