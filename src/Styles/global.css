@@ -1,3 +1,23 @@
 .ant-menu-item.no-after::after {
   display: none !important;
 }
+body {
+  margin: 0;
+}
+.ant-menu-item.no-after::after {
+  display: none !important;
+}
+.ticker-scroll {
+  animation: scroll 15s linear infinite; /* سرعت کمتر از قبل */
+}
+.ticker-scroll:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
