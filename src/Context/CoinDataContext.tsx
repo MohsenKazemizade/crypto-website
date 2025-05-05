@@ -38,8 +38,9 @@ export const CoinDataProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     const fetchCoins = async () => {
       try {
-        const response = await getCoinList(); // از coincap.ts
-        setCoins(response.data.data);
+        const response = await getCoinList();
+        console.log("Coin data fetched:", response);
+        setCoins(response);
       } catch {
         setError("Failed to fetch coin data.");
       } finally {
