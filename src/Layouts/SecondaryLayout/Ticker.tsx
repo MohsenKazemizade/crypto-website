@@ -26,6 +26,7 @@ const Ticker: React.FC = () => {
         whiteSpace: "nowrap",
         backgroundColor: isDark ? "#F0B90B" : "#ffffff",
         borderBottom: isDark ? "none" : "1px solid #f0f0f0",
+        borderTop: isDark ? "none" : "1px solid #f0f0f0",
         padding: "10px 0",
       }}
     >

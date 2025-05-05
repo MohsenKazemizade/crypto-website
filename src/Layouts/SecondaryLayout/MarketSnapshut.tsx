@@ -23,7 +23,8 @@ const MarketSnapshot: React.FC = () => {
       gutter={[16, 16]}
       style={{
         display: "flex",
-        padding: "16px 0",
+        padding: "16px 24px",
+        margin: "0",
         backgroundColor: isDark ? "#12161C" : "#fff",
       }}
     >

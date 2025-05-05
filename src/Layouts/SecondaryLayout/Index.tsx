@@ -9,12 +9,12 @@ const AuthLayout: React.FC = () => {
   const screens = useBreakpoint();
   const isMobile = screens.md;
   return (
-    <div className="secondary-layout" style={{ padding: "0 24px" }}>
+    <>
       <MarketSnapshut />
       {isMobile && <TopList />}
       <Ticker />
       <Outlet />
-    </div>
+    </>
   );
 };
 
